@@ -62,34 +62,36 @@ def excel_kaydet():
 root = tk.Tk()
 root.title("Gelir ve Gider Hesaplama Aracı")
 
-# Gelir Ekleme 
-tk.Label(root, text="Gelir Türü:").grid(row=0, column=0)
+# Gelir Ekleme
+root.configure(bg="#1e1e1e")
+tk.Label(root, text="Gelir Türü:", bg="#1e1e1e", fg="white").grid(row=0, column=0)
 gelir_turu_entry = tk.Entry(root)
 gelir_turu_entry.grid(row=0, column=1)
 
-tk.Label(root, text="Gelir Miktarı:").grid(row=1, column=0)
+tk.Label(root, text="Gelir Miktarı:", bg="#1e1e1e", fg="white").grid(row=1, column=0)
 gelir_miktari_entry = tk.Entry(root)
 gelir_miktari_entry.grid(row=1, column=1)
 
-tk.Button(root, text="Gelir Ekle", command=gelir_ekle).grid(row=2, column=1)
+tk.Button(root, text="Gelir Ekle", command=gelir_ekle, bg="#333", fg="white").grid(row=2, column=1)
 
 # Gider Ekleme 
-tk.Label(root, text="Gider Türü:").grid(row=3, column=0)
+root.configure(bg="#1e1e1e")
+tk.Label(root, text="Gider Türü:", bg="#1e1e1e", fg="white").grid(row=3, column=0)
 gider_turu_entry = tk.Entry(root)
 gider_turu_entry.grid(row=3, column=1)
 
-tk.Label(root, text="Gider Miktarı:").grid(row=4, column=0)
+tk.Label(root, text="Gider Miktarı:", bg="#1e1e1e", fg="white").grid(row=4, column=0)
 gider_miktari_entry = tk.Entry(root)
 gider_miktari_entry.grid(row=4, column=1)
 
-tk.Button(root, text="Gider Ekle", command=gider_ekle).grid(row=5, column=1)
+tk.Button(root, text="Gider Ekle", command=gider_ekle, bg="#333", fg="white").grid(row=5, column=1)
 
 # Hesaplama 
-tk.Button(root, text="Hesapla", command=hesapla).grid(row=6, column=1)
+tk.Button(root, text="Hesapla", command=hesapla, bg="#1e1e1e", fg="white").grid(row=6, column=1)
 sonuc_label = tk.Label(root, text="")
 sonuc_label.grid(row=7, column=1)
 
 # Excel'e Kaydet
-tk.Button(root, text="Excel'e Kaydet", command=excel_kaydet).grid(row=8, column=1)
+tk.Button(root, text="Excel'e Kaydet", command=excel_kaydet, bg="#1e1e1e", fg="white").grid(row=8, column=1)
 
 root.mainloop()
